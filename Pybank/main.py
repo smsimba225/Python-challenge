@@ -53,6 +53,6 @@ with open('financial_analysis.txt', 'w') as text:
     text.write('--------------------------\n\n')
     text.write('Total Months: ' + str(totalmonths) + '\n')
     text.write('Total Profits: ' + '$' + str(totalprofitloss) + '\n')
-    text.write('Average Change: ' + '$' + str(int(avgchangeprofit)) + '\n')
+    text.write('Average Change: ' + '$' + str(avgchangeprofit) + '\n')
     text.write('Greatest Increase in Profits: ' + str(date_greatest_increase) + ' ($' + str(greatest_increase) + ')\n')
     text.write('Greatest Decrease in Profits: ' + str(date_greatest_decrease) + ' ($' + str(greatest_decrease) + ')\n')
