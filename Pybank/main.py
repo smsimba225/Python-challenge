@@ -24,7 +24,7 @@ txtpath = os.path.join('analysis', 'financial_analysis.txt')
 with open(csvpath) as csv_file: 
     csv_reader = csv.reader(csv_file, delimiter=",")
     
-    next(csv_reader)
+    header = next(csv_reader)
 
     for line in csv_reader:
         totalmonths = totalmonths+1 # adds 1 to counter to find total number of months

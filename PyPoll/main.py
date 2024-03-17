@@ -19,11 +19,11 @@ txtpath = os.path.join('analysis', 'election_results.txt')
 with open(csvpath) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
 
-    next(csv_reader)
+    header = next(csv_reader)
 
     for line in csv_reader:
         totalvotes=totalvotes+1 # to count total number of votes, adds 1 to counter as it loops
-        candidate_list.append(line[2]) # adds name of candidate to list of candidates to find all candidates in election
+        candidate_list.append(line[2]) # adds name of candidate to list of candidates to find all candidates in election and also keeps count of votes
 
 # turn candidate list into set - 
 # sorted required to keep set order the same as when in a list, since set usually doesn't keep order but we want set because we don't want duplicates.
