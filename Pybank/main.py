@@ -1,6 +1,6 @@
 
 
-
+import os
 import csv
 
 
@@ -14,8 +14,8 @@ totalmonths=0
 totalprofitloss=0
 starting_profit=0
 ending_profit=0
-
-with open('./resources/budget_data.csv', 'r') as csv_file:
+csvpath = os.path.join('Resources', 'budget_data.csv')
+with open(csvpath) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
     
     next(csv_reader)
