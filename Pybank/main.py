@@ -55,6 +55,10 @@ with open(csvpath) as csv_file:
     print ('Greatest Increase in Profits: ' + str(date_greatest_increase) + ' ($' + str(greatest_increase)+')'+ '\n')
     print ('Greatest Decrease in Profits: ' + str(date_greatest_decrease) + ' ($' + str(greatest_decrease)+')'+ '\n')
  
+# checks to see if analysis folder is available to put analysis text into.
+if not os.path.exists('analysis'):
+    os.mkdir('analysis')
+
  # code to write financial analysis to text
 with open(txtpath, 'w') as text:
     text.write('Financial Analysis'+ '\n')

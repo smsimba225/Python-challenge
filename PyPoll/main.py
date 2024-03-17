@@ -55,8 +55,11 @@ print('---------------------------------'+'\n')
 print('Winner: ' + winner + '\n')
 print('---------------------------------'+'\n')
 
+# checks to see if analysis folder is available to put analysis text into.
+if not os.path.exists('analysis'):
+    os.mkdir('analysis')
+    
 # code to write election results to text file:
-
 with open(txtpath, 'w') as text:
         text.write('\n'+'Election Results'+ '\n\n')
         text.write('----------------------------'+'\n\n')
